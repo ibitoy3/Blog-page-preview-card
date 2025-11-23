@@ -18,7 +18,7 @@
 :root {
   --clr-page-background: hsl(47, 88%, 63%);
   --clr-card-background: hsl(0, 0%, 100%);
-  --clr-h1: hsl(0, 0%, 7%);
+  --clr-tag: hsl(0, 0%, 7%);
   --clr-text: hsl(0, 0%, 42%);
 
   --fs-400: 1rem;
@@ -42,13 +42,15 @@ body {
 main {
   display: flex;
   flex-direction: column;
+  gap: 3rem;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  padding-inline: 2rem;
 }
 
 .wrapper__card {
-  --pad: 1.25rem;
+  --pad: 1.1875rem;
   display: flex;
   flex-direction: column;
   padding: var(--pad);
@@ -58,6 +60,8 @@ main {
 .card {
   border-radius: 0.9375rem;
   background-color: var(--clr-card-background);
+  box-shadow: 0.4rem 0.4rem 0rem black;
+  border: 1px solid black;
 }
 
 .card__image {
@@ -71,23 +75,55 @@ main {
   margin-block-start: 1.25rem;
 }
 
-.tag {
+.card__info .tag {
   background-color: var(--clr-page-background);
-  max-width: 4.25rem;
+  max-width: 4.375rem;
   padding-inline: 0.625rem;
-  padding-block: 0.5rem;
+  padding-block: 0.375rem;
   border-radius: 0.3125rem;
   text-align: center;
   font-size: 0.75rem;
   font-weight: 800;
+  color: var(--clr-tag);
+  line-height: 1;
+}
+
+.card__info > p {
+  padding-block-start: 0.8125rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1;
 }
 
 .card__text h1 {
+  padding-block-start: 0.875rem;
+  padding-block-end: 1rem;
   font-size: 1.25rem;
+  color: var(--clr-tag);
 }
 
 .card__text p {
-  padding-block-start: 1.5rem;
+  padding-block-end: 1.25rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--clr-text);
+  line-height: 1.5;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.author img {
+  display: block;
+  width: 27px;
+}
+
+.author p {
+  font-size: 0.75rem;
+  font-weight: 800;
 }
 
 .attribution {
