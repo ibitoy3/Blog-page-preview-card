@@ -85,7 +85,7 @@ main {
   color: var(--clr-tag);
 }
 
-h1 a {
+.interact a {
   text-decoration: none;
   color: inherit;
 }
