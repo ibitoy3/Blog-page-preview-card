@@ -1,0 +1,99 @@
+/* 
+### Body Copy
+
+.figtree-<uniquifier> {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+- Font size (paragraph): 16px
+
+### Font
+
+- Family: [Figtree](https://fonts.google.com/specimen/Figtree)
+- Weights: 500, 800 */
+
+:root {
+  --clr-page-background: hsl(47, 88%, 63%);
+  --clr-card-background: hsl(0, 0%, 100%);
+  --clr-h1: hsl(0, 0%, 7%);
+  --clr-text: hsl(0, 0%, 42%);
+
+  --fs-400: 1rem;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  background-color: var(--clr-page-background);
+  font-family: "Figtree";
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.wrapper__card {
+  --pad: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  padding: var(--pad);
+  max-width: 20rem;
+}
+
+.card {
+  border-radius: 0.9375rem;
+  background-color: var(--clr-card-background);
+}
+
+.card__image {
+  display: block;
+  margin-inline: auto;
+  max-width: 17.5rem;
+  border-radius: 0.5rem;
+}
+
+.card__info {
+  margin-block-start: 1.25rem;
+}
+
+.tag {
+  background-color: var(--clr-page-background);
+  max-width: 4.25rem;
+  padding-inline: 0.625rem;
+  padding-block: 0.5rem;
+  border-radius: 0.3125rem;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.card__text h1 {
+  font-size: 1.25rem;
+}
+
+.card__text p {
+  padding-block-start: 1.5rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
